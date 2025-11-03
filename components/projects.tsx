@@ -1,40 +1,46 @@
-"use client";
-
-import { useState } from "react";
-import { projectsData } from "@/constants/projects";
-import ProjectTooltip from "./project-tooltip";
 import Link from "next/link";
-import { ArrowUpIcon, CardsThreeIcon } from "@phosphor-icons/react";
+import { WorkItem } from "./work-item";
 
-export default function Projects() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
+export function Projects() {
   return (
-    <div className="flex w-full flex-col items-start justify-start">
-      <div className="flex items-center justify-start gap-1 rounded-2xl rounded-b-none bg-gray-100 px-4 py-2 font-serif text-sm leading-tight text-black">
-        <CardsThreeIcon size={12} />
-        latest projects
+    <div className="flex flex-col sm:flex-row sm:space-x-12 py-4">
+      <div className="flex flex-col py-6">
+        <p className="text-xs font-semibold text-muted-foreground/55 font-geistMono pb-2">
+          Notable Work
+        </p>
+        <div className="grid grid-cols-1 mt-2 h-auto gap-12">
+          <WorkItem
+            title="Enjoytown"
+            date="2024 - 12"
+            description="Full-featured anime, drama, and movie streaming platform with Next.js and shadcn/ui"
+            href="https://github.com/avalynndev/enjoytown"
+          />
+        </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-start gap-1 rounded-full rounded-t-none">
-        {projectsData.map((project, index) => (
-          <ProjectTooltip key={project.id} project={project}>
-            <Link href={project.href} target="_blank">
-              <div
-                className={`flex cursor-pointer items-center justify-start gap-1 border border-gray-200 px-4 py-2 text-xs font-medium text-black transition-all duration-300 hover:bg-gray-200 ${
-                  index === 0 ? "rounded-2xl rounded-tl-none" : "rounded-full"
-                } ${
-                  hoveredProject === project.id ? "bg-gray-100 shadow-sm" : ""
-                } `}
-                onMouseEnter={() => setHoveredProject(project.id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                {project.name}
-                <ArrowUpIcon size={12} />
-              </div>
-            </Link>
-          </ProjectTooltip>
-        ))}
+      <div className="flex flex-col py-6">
+        <p className="text-xs font-semibold text-muted-foreground/55 font-geistMono ml-auto w-fit pb-3">
+          Featured Projects
+        </p>
+        <div className="grid grid-cols-1 mt-2 h-auto gap-12">
+          <WorkItem
+            title="Anonypost"
+            date="2024 - 07"
+            description="Anonymous post sharing platform built with Next.js, tRPC, and shadcn/ui"
+            href="https://github.com/avalynndev/anonypost"
+          />
+          <WorkItem
+            title="Document Viewer"
+            date="2024 - 08"
+            description="Universal file viewer supporting multiple formats with Next.js and shadcn/ui"
+            href="https://github.com/avalynndev/document-viewer"
+          />
+        </div>
+        <Link href="https://github.com/avalynndev" className="w-full mt-4">
+          <p className="text-xs font-semibold text-neutral-500 font-geistMono ml-auto w-fit">
+            View all
+          </p>
+        </Link>
       </div>
     </div>
   );
