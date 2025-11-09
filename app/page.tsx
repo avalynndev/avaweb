@@ -7,7 +7,7 @@ import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
-    <main className="mx-auto py-32 relative max-w-2xl min-h-screen overflow-hidden sm:overflow-visible px-6 sm:px-0">
+    <main className="mx-auto py-12 relative max-w-2xl min-h-screen overflow-hidden sm:overflow-visible px-6 sm:px-0">
       <div className="flex justify-between items-center py-10 w-full text-sm font-mono text-muted-foreground">
         <p>living on a cloud</p>
         <div className="flex justify-between gap-2">
@@ -24,25 +24,27 @@ export default function Home() {
 
         <div className="w-auto text-base py-6">
           <span>
-            15-year-old indie developer crafting web applications and games{" "}
+            15-year-old indie developer crafting web applications and creative
+            projects{" "}
             <span className="italic font-serif">
-              with Next.js, TypeScript, and Godot
+              with Next.js, TypeScript, and more
             </span>
             . I specialize in{" "}
-            <span className="font-serif italic underline">
-              full-stack development
+            <span className="font-serif underline">full-stack development</span>
+            , along with{" "}
+            <span>
+              game development, browser extensions, npm packages, and API
+              wrappers
             </span>
-            , game development, and{" "}
-            <span className="italic font-serif underline">
-              open-source projects
-            </span>
-            . Currently exploring database inegration.
+            .
+            <br />
+            Currently cooking something upp!
           </span>
         </div>
       </div>
       <Stack />
-      <Projects/>
-      <Socials/>
+      <Projects />
+      <Socials />
       <Footer />
     </main>
   );

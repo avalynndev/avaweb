@@ -11,7 +11,7 @@ export function Projects() {
         <div className="grid grid-cols-1 mt-2 h-auto gap-12">
           <WorkItem
             title="Enjoytown"
-            date="2024 - 12"
+            date="2024 - 05"
             description="Full-featured anime, drama, and movie streaming platform with Next.js and shadcn/ui"
             href="https://github.com/avalynndev/enjoytown"
           />
@@ -30,10 +30,10 @@ export function Projects() {
             href="https://github.com/avalynndev/anonypost"
           />
           <WorkItem
-            title="Document Viewer"
+            title="Memergez"
             date="2024 - 08"
-            description="Universal file viewer supporting multiple formats with Next.js and shadcn/ui"
-            href="https://github.com/avalynndev/document-viewer"
+            description="A platform for generating 50+ different types of memes. Created using next.js, memer.ts and shadcn-ui."
+            href="https://github.com/avalynndev/memergez"
           />
         </div>
         <Link href="https://github.com/avalynndev" className="w-full mt-4">

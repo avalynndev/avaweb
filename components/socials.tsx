@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const social_links = [
   {
-    href: "https://twitter.com/avalynndev",
+    href: "https://x.com/avalynndev",
     label: "twitter",
     icon: <XLogoIcon />,
   },
