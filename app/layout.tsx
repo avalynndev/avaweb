@@ -15,15 +15,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "avalynndev",
-  description: "personal portofilio of avalynndev",
+  title: {
+    default: "avalynndev",
+    template: "%s | avalynndev",
+  },
+  description:
+    "Personal portfolio of AvalynnDev – full-stack developer & indie creator.",
+  keywords: [
+    "avalynndev",
+    "portfolio",
+    "full stack developer",
+    "indie developer",
+    "next.js",
+    "typescript",
+    "web development",
+  ],
+  authors: [{ name: "avalynndev" }],
+  creator: "avalynndev",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  metadataBase: new URL("https://avalynndev.vercel.app"),
+  openGraph: {
+    title: "avalynndev",
+    description: "Personal portfolio of AvalynnDev.",
+    url: "https://avalynndev.vercel.app",
+    siteName: "avalynndev",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "avalynndev",
+    description: "Personal portfolio of AvalynnDev.",
+    creator: "@avalynndev",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
