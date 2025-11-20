@@ -1,12 +1,28 @@
 "use client";
-import { XLogoIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, XLogoIcon, YoutubeLogoIcon } from "@phosphor-icons/react";
+import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const social_links = [
   {
+    href: "https://github.com/avalynndev",
+    label: "github",
+    icon: <GithubLogoIcon />,
+  },
+  {
     href: "https://x.com/avalynndev",
     label: "twitter",
     icon: <XLogoIcon />,
+  },
+  {
+    href: "https://youtube.com/@avalynndev",
+    label: "youtube",
+    icon: <YoutubeLogoIcon />,
+  },
+  {
+    href: "https://discord.com/users/735059235141845003",
+    label: "discord",
+    icon: <DiscordLogoIcon />,
   },
 ];
 
